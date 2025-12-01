@@ -69,10 +69,10 @@ int main(int argc, char **argv){
 
   clock_t t0 = clock();
 
-  for (int i=0;i<N_A_row;++i) { // iterate over rows of A
-    for (int j=0;j<N_B_col;++j) { // iterate over columns of B
+  for (int i=0;i<N_A_row;++i) {        // iterate over rows of A
+    for (int j=0;j<N_B_col;++j) {      // iterate over columns of B
       double sum = 0.0;
-      for (int k=0;k<N_A_col;++k) { // iterate over columns of A (or rows of B)
+      for (int k=0;k<N_A_col;++k) {    // iterate over columns of A (or rows of B)
         sum += A[(long)i*N_A_col + k] * B[(long)k*N_B_col + j];
       }
       C[(long)i*N_B_col + j] = sum; // Store result in C
@@ -106,7 +106,9 @@ int main(int argc, char **argv){
     for (int j=0;j<N_B_col;++j){       //iterate over columns of C
       rowSum += C[(long)i*N_B_col + j];
     }
-    printf(" Row %2d sum = %.2f\n", i, rowSum);
+    if (N_A_row <= 50 && N_B_col <= 50) {       // Only print row sums if result matrix dimensions < 50
+      printf(" Row %2d sum = %.2f\n", i, rowSum);
+    }
     checksum += rowSum;
   }
   printf("Checksum (sum of all elements) = %.6e\n", checksum);
