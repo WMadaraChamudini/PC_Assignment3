@@ -26,6 +26,7 @@ gcc serial_mat_mul.c -o serial_mat_mul
 ```bash
 ./serial_mat_mul 4 3 3 5
 ./serial_mat_mul 40 4000 4000 40
+./serial_mat_mul 4000 400 400 4000
 ```
 
 ---
@@ -56,6 +57,9 @@ gcc -O3 -fopenmp openmp_mat_mul.c -o openmp_mat_mul
 ./openmp_mat_mul 4 3 3 5 4
 ./openmp_mat_mul 40 4000 4000 40 2
 ./openmp_mat_mul 40 4000 4000 40 4
+./openmp_mat_mul 4000 400 400 4000 1
+./openmp_mat_mul 4000 400 400 4000 2
+./openmp_mat_mul 4000 400 400 4000 4
 ```
 
 ---
@@ -86,6 +90,9 @@ mpirun -np <processes> ./mpi_mat_mul A_rows A_cols B_rows B_cols
 mpirun --allow-run-as-root --oversubscribe -np 4 ./mpi_mat_mul 4 3 3 5
 mpirun --allow-run-as-root --oversubscribe -np 2 ./mpi_mat_mul 40 4000 4000 40
 mpirun --allow-run-as-root --oversubscribe -np 4 ./mpi_mat_mul 40 4000 4000 40
+mpirun --allow-run-as-root --oversubscribe -np 1 ./mpi_mat_mul 4000 400 400 4000
+mpirun --allow-run-as-root --oversubscribe -np 2 ./mpi_mat_mul 4000 400 400 4000
+mpirun --allow-run-as-root --oversubscribe -np 4 ./mpi_mat_mul 4000 400 400 4000
 ```
 
 ---
@@ -114,7 +121,12 @@ nvcc -O3 -arch=sm_75 cuda_mat_mul.cu -o cuda_mat_mul
 
 ```bash
 ./cuda_mat_mul 4 3 3 5 16
-./cuda_mat_mul 1024 1024 1024 1024 32
+./cuda_mat_mul 40 4000 4000 40 4
+./cuda_mat_mul 40 4000 4000 40 8
+./cuda_mat_mul 4000 400 400 4000 1
+./cuda_mat_mul 4000 400 400 4000 2
+./cuda_mat_mul 4000 400 400 4000 4
+./cuda_mat_mul 4000 400 400 4000 8
 ```
 
 ---
