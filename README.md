@@ -177,3 +177,10 @@ Install via NVIDIA website (Linux/Windows/WSL2) or run CUDA on **Google Colab**.
 **YouTube link:** https://youtu.be/HEr9D8qNgB8
 
 ---
+
+### Note:
+Full matrix printing is enabled only when all dimensions are ≤ 10 to avoid oversized console output.
+Row-wise sums are printed only when result matrix (C) dimensions are ≤ 50 to keep output readable for large matrices.
+Otherwise, only Checksum (sum of all elements) is printed.
+
+---
