@@ -1,9 +1,9 @@
 # PC_Assignment3 – Matrix Multiplication (Serial, OpenMP, MPI, CUDA)
 This project implements **Matrix Multiplication** using four different programming paradigms:
-                - **Serial C**
-                - **OpenMP** (Shared Memory Parallelism)
-                - **MPI** (Distributed Memory Parallelism)
-                - **CUDA** (GPU Acceleration)
+* **Serial C**
+* **OpenMP** (Shared Memory Parallelism)
+* **MPI** (Distributed Memory Parallelism)
+* **CUDA** (GPU Acceleration)
 
 All implementations support dynamic matrix sizes, execution-time measurement, row-wise checksums and output summaries.
 
