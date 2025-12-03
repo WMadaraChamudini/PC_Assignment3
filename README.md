@@ -136,7 +136,7 @@ nvcc -O3 -arch=sm_75 cuda_mat_mul.cu -o cuda_mat_mul
 This project supports detailed performance analysis:
 
 * Execution time comparison
-* Row-wise checksum verification
+* Checksum verification
 * Speedup calculation
   
 ### Graphs (In the Report)
