@@ -174,7 +174,7 @@ Install via NVIDIA website (Linux/Windows/WSL2) or run CUDA on **Google Colab**.
 
 ## Demonstration Video
 
-**YouTube link:** https://youtu.be/HEr9D8qNgB8
+**YouTube link:** https://youtu.be/odvmAwtQgtg
 
 ---
 
